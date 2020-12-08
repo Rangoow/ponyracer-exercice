@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import {RaceService} from './services/race.service';
-import {RaceModel} from './races/models/race.model';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -10,11 +8,8 @@ import { Title } from '@angular/platform-browser';
 })
 export class AppComponent {
 
-  constructor(private raceService: RaceService, title: Title ) {
+  constructor(title: Title ) {
     title.setTitle('PonyRacer - Bet on ponies');
   }
 
-  list(): Array<RaceModel>{
-    return this.raceService.list();
-  }
 }

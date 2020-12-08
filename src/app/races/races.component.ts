@@ -1,20 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import {RaceModel} from './models/race.model';
+import {RaceService} from '../race.service';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'pr-races',
   templateUrl: './races.component.html',
   styleUrls: ['./races.component.css']
 })
-export class RacesComponent implements OnInit {
+export class RacesComponent {
 
-  constructor() { }
+  constructor(private raceService: RaceService) { }
 
-  races: Array<any> = [];
+  races: Array<RaceModel> = [];
 
-  ngOnInit(): void {
-    this.races = [{ name: 'Lyon' }, { name: 'London' }];
+  list(): Array<RaceModel>{
+    return this.races = this.raceService.list();
   }
-
-
-
 }

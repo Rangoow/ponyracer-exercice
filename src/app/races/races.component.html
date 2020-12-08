@@ -1,3 +1,1 @@
-<div *ngFor="let race of races">
-    <h2> {{ race.name }} </h2>
-</div>
+<h2 *ngFor="let race of list() | slice:0:4 "> {{ race.name }} </h2>

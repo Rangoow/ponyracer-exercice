@@ -9,10 +9,6 @@ import { delay } from 'rxjs/operators';
 })
 export class RaceService {
   list(): Observable<Array<RaceModel>> {
-    return of([{ name: 'Lyon' },
-      { name: 'Los Angeles' },
-      { name: 'Sydney' },
-      { name: 'Tokyo' },
-      { name: 'Casablanca' }]).pipe(delay(500));
+    return of([{ name: 'Lyon' }, { name: 'Los Angeles' }, { name: 'Sydney' }, { name: 'Tokyo' }, { name: 'Casablanca' }]).pipe(delay(500));
   }
 }
